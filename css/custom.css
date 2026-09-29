@@ -270,8 +270,8 @@ a {
 }
 
 .section-subtitle {
-  font-size: 1.05rem;
-  color: var(--n-slate);
+  font-size: 17px;
+  color: black;
   max-width: 620px;
 }
 
