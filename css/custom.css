@@ -1087,6 +1087,11 @@ a {
   resize: none;
 }
 
+textarea.form-control {
+  resize: none !important;
+  min-height: 120px;
+}
+
 .form-control:focus,
 .form-select:focus {
   border-color: var(--n-primary);
