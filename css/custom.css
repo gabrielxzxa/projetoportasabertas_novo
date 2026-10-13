@@ -120,13 +120,12 @@
 
 html {
   scroll-behavior: smooth;
-  height: 100%;
+  min-height: 100%;
 }
 
 body {
   min-height: 100vh;
   margin: 0;
-
   display: flex;
   flex-direction: column;
 
@@ -463,23 +462,23 @@ a {
 
 .hero {
   position: relative;
+  flex: 1;
+  min-height: calc(100vh - 90px);
+
   padding-top: 9rem;
   padding-bottom: 5rem;
 
   background: var(--n-gradient-soft);
   overflow: hidden;
 }
-
 .hero::before {
   content: '';
-
   position: absolute;
   top: -150px;
   right: -150px;
 
   width: 500px;
   height: 500px;
-
   border-radius: 50%;
 
   background: radial-gradient(
@@ -494,14 +493,12 @@ a {
 
 .hero::after {
   content: '';
-
   position: absolute;
   bottom: -200px;
   left: -150px;
 
   width: 450px;
   height: 450px;
-
   border-radius: 50%;
 
   background: radial-gradient(
@@ -539,8 +536,6 @@ a {
     font-size: 2rem;
   }
 }
-
-
 /* =========================================================
    HERO VISUAL
 ========================================================= */
@@ -1206,6 +1201,7 @@ textarea.form-control {
 .mercado-footer {
   width: 100%;
   margin-top: auto;
+  flex-shrink: 0;
 
   background: linear-gradient(
     90deg,
@@ -1225,7 +1221,6 @@ textarea.form-control {
   font-size: 1rem;
   line-height: 1.5;
 }
-
 
 /* =========================================================
    ÍCONES SOCIAIS
@@ -1727,11 +1722,12 @@ textarea.form-control {
     flex-direction: column;
   }
 
-  .mercado-footer {
-    padding: 30px 15px;
+  @media (max-width: 575.98px) {
+    .mercado-footer {
+      padding: 30px 15px;
+    }
   }
-
   .mercado-footer h5 {
     font-size: 0.85rem;
   }
-}
+} 
