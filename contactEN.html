@@ -114,9 +114,19 @@
             <div class="row g-3">
 
               <div class="col-md-6">
-                <label class="form-label" for="fullName">Name (required)</label>
-                <input type="text" class="form-control" id="fullName" placeholder="Your name" required>
-                <div class="invalid-feedback">Enter your name</div>
+                <label class="form-label" for="fullName">Name(required) </label>
+            
+<input
+                type="text"
+                pattern="[A-Za-zÀ-ÖØ-öø-ÿ ]+"
+                class="form-control"
+                id="fullName"
+                name="fullName"
+                title="Digite apenas letras e espaços."
+                required
+>
+
+                <div class="invalid-feedback">Por favor, insira seu nome</div>
               </div>
 
               <div class="col-md-6">
